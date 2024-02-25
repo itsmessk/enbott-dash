@@ -42,7 +42,7 @@ if ($result_hours->num_rows > 0) {
 }
 
 // SQL query to count the number of sections
-$sql_sections = "SELECT COUNT(*) AS total_sections FROM sections   ";
+$sql_sections = "SELECT COUNT(*) AS total_sections FROM ections   ";
 $result_sections = $conn->query($sql_sections);
 if ($result_sections->num_rows > 0) {
     $row = $result_sections->fetch_assoc();
@@ -119,6 +119,7 @@ $conn->close();
 
 
     </style>
+    
 </head>
 
 <body>
@@ -129,7 +130,7 @@ $conn->close();
         <!-- Header Menu Area Start Here -->
         <div class="navbar navbar-expand-md header-menu-one bg-light">
             <div class="nav-bar-header-one"
-                style="background: linear-gradient(to right, #ffffff, #ffffff); border-right: 2px solid black; text-align: center;">
+                style="background: green; border-right: 2px solid black; text-align: center; padding-left:35px">
                 <div class="header-logo">
                     <a href="index.php">
                         <img src="img/logo.png" alt="logo">
@@ -582,7 +583,8 @@ $conn->close();
 
                         </div>
                     </div>
-
+                    <iframe src="inner.php" width="100%" height="140%" style="border:none;"></iframe>
+</body>
                     <!-- Dashboard Content End Here -->
                     <footer class="footer-wrap-layout1">
                         <div class="copyright">
@@ -698,7 +700,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <script>
 if ($("#student-doughnut-chart").length) {
     var doughnutChartData = {
-        labels: ["Aptitude", "Communication"],
+        labels: ["Communication", "Apptitude"],
         datasets: [{
             backgroundColor: ["#304ffe", "#ffa601"],
             // Use PHP variables to pass the total hours data

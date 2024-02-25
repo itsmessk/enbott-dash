@@ -4,8 +4,8 @@ session_start();
 
 # If user is not logged in then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
-  echo "<script>" . "window.location.href='login/login.php';" . "</script>";
-  exit;
+    echo "<script>" . "window.location.href='login/login.php';" . "</script>";
+    exit;
 }
 ?>
 
@@ -36,10 +36,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
     <link rel="stylesheet" href="css/jquery.dataTables.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Modernize js -->
     <style>
-        
+
     </style>
     <script src="js/modernizr-3.6.0.min.js"></script>
 </head>
@@ -51,8 +51,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
     <div id="wrapper" class="wrapper bg">
         <!-- Header Menu Area Start Here -->
         <div class="navbar navbar-expand-md header-menu-one bg-light">
-            <div class="nav-bar-header-one"
-                style="background: linear-gradient(to right, #ffffff, #ffffff); border-right: 2px solid black; text-align: center;">
+        <div class="nav-bar-header-one"
+                style="background: green; border-right: 2px solid black; text-align: center; padding-left:35px">
                 <div class="header-logo">
                     <a href="index.php">
                         <img src="img/logo.png" alt="logo">
@@ -366,7 +366,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                         include 'conn.php';
 
                         // SQL query to fetch trainer details
-                        $sql = "SELECT * FROM sections";
+                        $sql = "SELECT * FROM ections";
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
@@ -387,12 +387,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     <td>
                         <div class='form-check'>
                             <input type='checkbox' class='form-check-input'>
-                            <label class='form-check-label'>" . $row["section_id"] . "</label>
+                            <label class='form-check-label'>" . $row["id"] . "</label>
                         </div>
                     </td>
                     
-                    <td>" . $row["section_name"] . "</td>
-                    <td>" . $row["classroom"] . "</td>
+                    <td>" . $row["name"] . "</td>
+                    <td>" . $row["class"] . "</td>
                   </tr>";
                             }
                             echo "      </tbody>
@@ -410,14 +410,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     </div>
                 </div>
             </div>
-                    </div>
-                    </div>
-            <!-- Student Table Area End Here -->
-            <!-- <footer class="footer-wrap-layout1">
+        </div>
+    </div>
+    <!-- Student Table Area End Here -->
+    <!-- <footer class="footer-wrap-layout1">
                 <div class="copyright">© Copyrights <a href="#">akkhor</a> 2019. All rights reserved. Designed by <a
                         href="#">PsdBosS</a></div>
             </footer> -->
-        </div>
+    </div>
     </div>
     <!-- Page Area End Here -->
     </div>
@@ -439,11 +439,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-    $(document).ready(function() {
-        $('.data-table').DataTable({
-            "pageLength": 10
+        $(document).ready(function () {
+            $('.data-table').DataTable({
+                "pageLength": 10
+            });
         });
-    });
     </script>
 
 </body>

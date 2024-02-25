@@ -52,7 +52,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
     <div id="wrapper" class="wrapper bg">
        <!-- Header Menu Area Start Here -->
         <div class="navbar navbar-expand-md header-menu-one bg-light">
-            <div class="nav-bar-header-one" style="background: linear-gradient(to right, #ffffff, #ffffff); border-right: 2px solid black; text-align: center;">
+        <div class="nav-bar-header-one"
+                style="background: green; border-right: 2px solid black; text-align: center; padding-left:35px">
                 <div class="header-logo">
                     <a href="index.php">
                         <img src="img/logo.png" alt="logo">

@@ -51,8 +51,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
     <div id="wrapper" class="wrapper bg">
         <!-- Header Menu Area Start Here -->
         <div class="navbar navbar-expand-md header-menu-one bg-light">
-            <div class="nav-bar-header-one"
-                style="background: linear-gradient(to right, #ffffff, #ffffff); border-right: 2px solid black; text-align: center;">
+        <div class="nav-bar-header-one"
+                style="background: green; border-right: 2px solid black; text-align: center; padding-left:35px">
                 <div class="header-logo">
                     <a href="index.php">
                         <img src="img/logo.png" alt="logo">
@@ -320,7 +320,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                         <li>
                             <a href="index.html">Home</a>
                         </li>
-                        <li>Aptitude</li>
+                        <li>Overall Coverage</li>
                     </ul>
                 </div>
                 <!-- Breadcubs Area End Here -->
@@ -329,7 +329,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
                     <div class="card-body">
                         <div class="heading-layout1">
                             <div class="item-title">
-                                <h3>Day-Wise Coverage Details</h3>
+                            <h3>Day-Wise Coverage Details - <?php echo isset($_GET['topic']) ? ($_GET['topic'] == '1' ? 'Aptitude' : 'Communication') : ''; ?></h3>
                             </div>
                             <div class="dropdown">
                                 <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
@@ -471,6 +471,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
             });
         });
     </script>
+    
 
 </body>
 
